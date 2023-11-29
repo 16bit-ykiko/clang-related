@@ -1412,10 +1412,10 @@ class File(ClangObject):
 
 
 class FileInclusion:
-    source: Incomplete
-    include: Incomplete
-    location: Incomplete
-    depth: Incomplete
+    source: File
+    include: File
+    location: SourceLocation
+    depth: int
     def __init__(self, src, tgt, loc, depth) -> None: ...
     @property
     def is_input_file(self) -> bool: ...
